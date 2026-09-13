@@ -43,6 +43,12 @@ android {
 }
 
 dependencies {
+    // room
+    implementation(libs.androidx.room3.runtime)
+    implementation(libs.androidx.room3.compiler)
+    implementation(libs.androidx.room3.ktx)
+    implementation(libs.androidx.room3.testing)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
