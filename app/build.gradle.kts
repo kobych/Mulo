@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.detekt)
     alias(libs.plugins.ktlint)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -34,8 +35,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
     buildFeatures {
         compose = true
@@ -45,9 +46,9 @@ android {
 dependencies {
     // room
     implementation(libs.androidx.room3.runtime)
-    implementation(libs.androidx.room3.compiler)
-    implementation(libs.androidx.room3.ktx)
-    implementation(libs.androidx.room3.testing)
+    ksp(libs.androidx.room3.compiler)
+    testImplementation(libs.androidx.room3.testing)
+    androidTestImplementation(libs.androidx.room3.testing)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
