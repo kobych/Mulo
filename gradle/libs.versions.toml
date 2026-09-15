@@ -31,8 +31,8 @@ androidx-compose-material3 = { group = "androidx.compose.material3", name = "mat
 # room
 androidx-room3-runtime = { group = "androidx.room3", name = "room3-runtime", version.ref = "room" }
 androidx-room3-compiler = { group = "androidx.room3", name = "room3-compiler", version.ref = "room" }
-androidx-room3-ktx = { group = "androidx.room", name = "room3-ktx", version.ref = "room" }
-androidx-room3-testing = { group = "androidx.room", name = "room3-testing", version.ref = "room"}
+androidx-room3-ktx = { group = "androidx.room3", name = "room3-ktx", version.ref = "room" }
+androidx-room3-testing = { group = "androidx.room3", name = "room3-testing", version.ref = "room"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
