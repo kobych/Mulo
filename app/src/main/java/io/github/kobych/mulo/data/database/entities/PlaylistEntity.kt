@@ -6,5 +6,5 @@ import androidx.room3.PrimaryKey
 @Entity
 data class PlaylistEntity(
     @PrimaryKey val id: Int,
-    val name: String
+    val name: String,
 )

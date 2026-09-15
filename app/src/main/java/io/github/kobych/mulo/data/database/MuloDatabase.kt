@@ -11,7 +11,7 @@ import io.github.kobych.mulo.data.database.entities.TrackEntity
 @Database(
     entities = [PlaylistEntity::class, PlaylistTrackEntity::class, TrackEntity::class],
     version = 1,
-    exportSchema = false
+    exportSchema = false,
 )
 abstract class MuloDatabase : RoomDatabase() {
     companion object {

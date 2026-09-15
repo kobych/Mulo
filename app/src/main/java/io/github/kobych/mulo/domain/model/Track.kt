@@ -7,5 +7,5 @@ data class Track(
     val album: String,
     val duration: Long,
     val uri: String,
-    val hash: String
+    val hash: String,
 )
