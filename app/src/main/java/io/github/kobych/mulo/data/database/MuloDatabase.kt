@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room3.Database
 import androidx.room3.Room
 import androidx.room3.RoomDatabase
+import io.github.kobych.mulo.data.database.dao.TrackDao
 import io.github.kobych.mulo.data.database.entities.PlaylistEntity
 import io.github.kobych.mulo.data.database.entities.PlaylistTrackEntity
 import io.github.kobych.mulo.data.database.entities.TrackEntity
@@ -14,6 +15,8 @@ import io.github.kobych.mulo.data.database.entities.TrackEntity
     exportSchema = false,
 )
 abstract class MuloDatabase : RoomDatabase() {
+    abstract fun trackDao(): TrackDao
+
     companion object {
         @Volatile
         private var instance: MuloDatabase? = null

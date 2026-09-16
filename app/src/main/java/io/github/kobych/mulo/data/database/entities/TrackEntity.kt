@@ -3,7 +3,7 @@ package io.github.kobych.mulo.data.database.entities
 import androidx.room3.Entity
 import androidx.room3.PrimaryKey
 
-@Entity
+@Entity(tableName = "tracks")
 data class TrackEntity(
     @PrimaryKey val id: Int,
     val title: String,
