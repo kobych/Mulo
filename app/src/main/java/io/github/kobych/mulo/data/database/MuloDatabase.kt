@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.room3.Database
 import androidx.room3.Room
 import androidx.room3.RoomDatabase
+import io.github.kobych.mulo.data.database.dao.PlaylistDao
+import io.github.kobych.mulo.data.database.dao.PlaylistTrackDao
 import io.github.kobych.mulo.data.database.dao.TrackDao
 import io.github.kobych.mulo.data.database.entities.PlaylistEntity
 import io.github.kobych.mulo.data.database.entities.PlaylistTrackEntity
@@ -16,6 +18,10 @@ import io.github.kobych.mulo.data.database.entities.TrackEntity
 )
 abstract class MuloDatabase : RoomDatabase() {
     abstract fun trackDao(): TrackDao
+
+    abstract fun playlistDao(): PlaylistDao
+
+    abstract fun playlistTrackDao(): PlaylistTrackDao
 
     companion object {
         @Volatile

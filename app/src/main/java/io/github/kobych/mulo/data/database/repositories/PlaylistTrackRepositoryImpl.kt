@@ -12,13 +12,13 @@ class PlaylistTrackRepositoryImpl(
     private val playlistTrackDao: PlaylistTrackDao,
 ) : PlaylistTrackRepository {
     override suspend fun addTrackToPlaylist(
-        track: Track,
+        playlistTrack: Track,
         playlistId: Int,
         position: Int,
     ) = playlistTrackDao.addTrackToPlaylist(
         PlaylistTrackEntity(
             playlistId = playlistId,
-            trackId = track.id,
+            trackId = playlistTrack.id,
             position = position,
         ),
     )

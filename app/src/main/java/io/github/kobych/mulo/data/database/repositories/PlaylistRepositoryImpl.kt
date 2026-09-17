@@ -24,5 +24,5 @@ class PlaylistRepositoryImpl(
 
     override suspend fun updatePlaylist(playlist: Playlist) = playlistDao.updatePlaylist(playlist.toEntity())
 
-    override suspend fun createPlaylist(playlist: Playlist): Int = playlistDao.createPlaylist(playlist.toEntity())
+    override suspend fun createPlaylist(playlist: Playlist) = playlistDao.createPlaylist(playlist.toEntity())
 }

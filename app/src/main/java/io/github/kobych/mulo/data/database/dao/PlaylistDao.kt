@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface PlaylistDao {
     @Insert
-    suspend fun createPlaylist(playlistEntity: PlaylistEntity): Int
+    suspend fun createPlaylist(playlistEntity: PlaylistEntity)
 
     @Update
     suspend fun updatePlaylist(playlistEntity: PlaylistEntity)

@@ -10,7 +10,7 @@ interface PlaylistRepository {
 
     suspend fun updatePlaylist(playlist: Playlist)
 
-    suspend fun createPlaylist(playlist: Playlist): Int
+    suspend fun createPlaylist(playlist: Playlist)
 
     fun observePlaylists(): Flow<List<Playlist>>
 }
